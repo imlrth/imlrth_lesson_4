@@ -1,0 +1,23 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.get("https://practice.automationtesting.in/")
+driver.execute_script("window.scrollBy(0, 600);")
+ruby_btn = driver.find_element_by_class_name("woocommerce-LoopProduct-link")
+ruby_btn.click()
+rev_btn = driver.find_element_by_class_name("reviews_tab")
+rev_btn.click()
+driver.execute_script("window.scrollBy(0, 400);")
+rating_btn = driver.find_element_by_class_name("star-5")
+rating_btn.click()
+review_field = driver.find_element_by_id("comment")
+review_field.send_keys("Nice book!")
+name_field = driver.find_element_by_id("author")
+name_field.send_keys("imlrth")
+mail_field = driver.find_element_by_id("email")
+mail_field.send_keys("sentinell@mail.ru")
+sub_btn = driver.find_element_by_id("submit")
+sub_btn.click()
+driver.quit()
