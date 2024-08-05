@@ -250,4 +250,3 @@ driver.maximize_window()
 #
 # driver.quit()
 
-C:/Users/79131/PycharmProjects/pythonProject1/book_store_testing
